@@ -1,58 +1,105 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guia de Viagem - Japão</title>
-  <link rel="stylesheet" href="estilo.css" />
-  <script src="script.js"></script>
-</head>
-<body>
+  <!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="inicio.css" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <header>
-    <div class="container">
-      <h1>Guia de Viagem</h1>
-      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-      <nav class="menu">
-        <a href="inicio.html">Início</a>
-        <a href="index.html">Destinos</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-    </div>
-  </header>
+  </head>
+  <body>
 
-  <section class="banner">
-    <div class="container">
-      <h2>Japão</h2>
-      <p>Conheça as melhores atrações do Japão</p>
-    </div>
-  </section>
+    <header>
+      <div class="container">
+        <h1>Guia de Viagem</h1>
+            
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      
+        <nav class="menu" id="menu">
+          <a href="index.html">Início</a>
+          <a href="inicio.html">Destinos</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </div>
+    </header>
 
-  <main class="centro">
+    <section class="banner">
+      <h2>Explore o Japão</h2>
+      <p>Descubra paisagens incríveis e cultura milenar</p>
+    </section>
+    
+
+    <section class="caixa-texto">
+      <h1>As Maravilhas do Japão</h1>
+      <p><strong>O Japão</strong>, localizado no <em>leste da Ásia</em>, é um arquipélago formado por quatro ilhas principais: <strong>Honshu</strong>, <strong>Hokkaido</strong>, <strong>Kyushu</strong> e <strong>Shikoku</strong>, além de inúmeras ilhas menores. Sua capital, <strong>Tóquio</strong>, é uma das maiores metrópoles globais. Reconhecido por sua <span style="color: #ff6347;">rica história</span> e <span style="color: #4682b4;">cultura singular</span>, o Japão combina tradições como a <em>cerimônia do chá</em>, festivais sazonais e artes marciais, como <strong>judô</strong> e <strong>karatê</strong>, com avanços tecnológicos de ponta.</p>
+      <p>A <span style="color: #32cd32;">culinária japonesa</span>, que inclui pratos como <strong>sushi</strong>, <strong>ramen</strong>, <strong>tempura</strong> e <strong>sashimi</strong>, é apreciada mundialmente. O país também encanta com suas paisagens icônicas, como o <strong>Monte Fuji</strong>, os <strong>templos de Kyoto</strong>, os <strong>jardins de Kanazawa</strong> e as <span style="color: #d7237d;">cerejeiras em flor</span> na primavera.</p>
+      <p>Com uma <strong>economia robusta</strong> e uma <em>sociedade organizada</em>, o Japão é um destino <span style="font-size: 1.2em; font-weight: bold;">imperdível</span> para viajantes de todas as partes do mundo.</p>
+    </section>
+
     <section class="cards">
-      <article class="card">
-        <a href="toquio.html"><img src="Tokyo.jpg" alt="Tóquio" /></a>
-        <h3>Tóquio</h3>
-        <p>A vibrante capital japonesa, cheia de tecnologia e tradição.</p>
-        
-      </article>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Chureito_Pagoda_and_Mount_Fuji.jpg" alt="Monte Fuji" />
+        <h3>Monte Fuji</h3>
+        <p>O símbolo natural mais famoso do Japão.</p>
+      </div>
+      <div class="card">
+        <img src="https://res.cloudinary.com/jnto/image/upload/w_750,h_503,fl_lossy,f_auto/v1648523563/kyoto/20201026_fushimi_inari_taisha_shrine_01" alt="Fushimi Inari" />
+        <h3>Fushimi Inari</h3>
+        <p>Os icônicos portões vermelhos em Kyoto.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/19693257/pexels-photo-19693257/free-photo-of-shibuya-crossing-in-tokyo-at-night.jpeg" alt="Shibuya" />
+        <h3>Shibuya</h3>
+        <p>O cruzamento mais famoso do mundo em Tóquio.</p>
+      </div>
+    </section>
 
-      <article class="card">
-       <a href="quioto.html"> <img src="kyoto-japao-198-c.jpg" alt="Quioto"></a>
-        <h3>Quioto</h3>
-        <p>Conheça os templos históricos e a cultura tradicional japonesa.</p>
-        
-      </article>
+    <button id="scrollTopBtn" title="Voltar ao topo">⬆</button>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Rodolfo Viagens. Todos os direitos reservados.</p>
+      </div>
+    </footer>
 
     
-    </section>
-  </main>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
 
-  <footer>
-    <div class="container">
-      <p>&copy; Rodolfo viagens Todos os direitos reservados.</p>
+      menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+      });
+
+      
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.style.display = "block";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+    <audio id="musica" loop>
+      <source src="sakura.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <p>Clique no ícone para ativar a trilha sonora 🍵</p>
+    <div class="sound-icon" onclick="tocarMusica()">
+      <i class="fas fa-music"></i>
     </div>
-  </footer>
-
-</body>
-</html>
+  </body>
+  </html>

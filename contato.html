@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formulário de Contato</title>
   <link rel="stylesheet" href="contato.css" />
-  <script src="script.js"></script>
 </head>
+<body>
 
-<header>
+  <header>
     <div class="container">
       <h1>Guia de Viagem</h1>
-      <nav>
-        <a href="inicio.html">Início</a>
-        <a href="index.html">Destinos</a>
-        <a href="#">Contato</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="menu" id="menu">
+        <a href="index.html">Início</a>
+        <a href="inicio.html">Destinos</a>
+        <a href="contato.html">Contato</a>
       </nav>
     </div>
   </header>
-<body>
 
   <div class="form-container">
     <h2>Entre em Contato</h2>
@@ -44,8 +48,16 @@
       </div>
 
       <button type="submit">Enviar</button>
+      <div class="texto-container">
+        <h3>Nosso Endereço</h3>
+        <p>
+          Rua do Sol Nascente, 123<br>
+          Bairro Jardim, Cidade do Japão<br>
+          CEP: 12345-678
+        </p>
+      </div>
+  
     </form>
   </div>
-
 </body>
 </html>
